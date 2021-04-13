@@ -1,0 +1,23 @@
+/*colors*/
+:root {
+  --primary-color: #0090f6;
+  --text-color: #333333;
+  --border-color: #c3c7c8;
+}
+
+/*initialize*/
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+body *:after,
+body *:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
