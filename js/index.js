@@ -4,3 +4,4 @@ App.setUrl('../data/xbox.json');
 App.fetchData();
 App.setData(JSON.parse(localStorage.getItem('data')));
 App.setProductCard();
+App.setPopupForm();

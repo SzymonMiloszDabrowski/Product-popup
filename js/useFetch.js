@@ -5,6 +5,7 @@ const useFetch = (URL) => {
       return res.json();
     })
     .then((data) => {
+      localStorage.clear();
       localStorage.setItem('data', JSON.stringify(data));
     })
     .catch((err) => {

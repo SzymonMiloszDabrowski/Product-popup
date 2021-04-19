@@ -1,5 +1,6 @@
 import useFetch from './useFetch.js';
 import Popup from './Popup.js';
+import PopupForm from './PopupForm.js';
 
 class App {
   constructor() {
@@ -28,10 +29,20 @@ class App {
   }
 
   setProductCard() {
-    document.querySelector('.product-name').innerText = this.data.product.name;
-    document.querySelector('.open-popup').addEventListener('click', () => {
+    document.querySelector('.card-product-name').innerText = this.data.product.name;
+    document.querySelector('.card-open-popup').addEventListener('click', () => {
       new Popup(document.querySelector('.popup')).openPopup();
     });
+  }
+
+  setPopupForm() {
+    const form = new PopupForm(this.data);
+    form.setProductName();
+    form.setShowSlides();
+    form.setSizes();
+    form.setVariants();
+    form.setAmountOfProduct();
+    form.handleSubmit();
   }
 }
 

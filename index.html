@@ -8,15 +8,58 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="product-card">
+    <div class="cards-container">
+      <div class="card">
         <img src="img/xbox.svg" alt="xbox image" />
-        <span class="product-name">brak danych</span>
-        <span class="product-price">już od 3343,13 zł</span>
-        <button class="primary-btn open-popup">przejdź do karty produktu</button>
+        <span class="card-product-name">nazwa produktu</span>
+        <span class="card-product-price">już od 3343,13 zł</span>
+        <button class="primary-btn card-open-popup">przejdź do karty produktu</button>
       </div>
       <div class="popup">
-        <img class="close-btn" src="img/close.svg" alt="" />
+        <div class="popup-header">
+          <h2 class="popup-product-name">Nazwa produtu</h2>
+          <img class="close-btn" src="img/close.svg" alt="close button" />
+        </div>
+
+        <div class="slideshow-container">
+          <img class="slides fade" src="img/xbox.svg" />
+          <img class="slides fade" src="img/xbox.svg" />
+          <img class="slides fade" src="img/xbox.svg" />
+
+          <a class="prev"><img src="img/chevron-right.svg" alt="chevron-left" /></a>
+          <a class="next"><img src="img/chevron-right.svg" alt="chevron-right" /></a>
+        </div>
+
+        <form class="popup-form-container">
+          <p class="popup-form-titles">Rozmiar:</p>
+          <div class="popup-sizes-container"></div>
+
+          <p class="popup-form-titles">Wariant:</p>
+          <select class="popup-select-variants" required>
+            <option disabled selected>Wybierz...</option>
+          </select>
+          <div class="popup-grid-container">
+            <div class="popup-availablility">
+              <img src="img/ok.svg" alt="availability sign" />
+              <p class="popup-availablility-text">Produkt dostępny</p>
+            </div>
+            <div class="popup-delivery">
+              <img src="img/delivery-time-tool.svg" alt="clock icon" />
+              <div class="popup-delivery-text">
+                <p>
+                  Możemy wysłać już dzisiaj! <br />
+                  <a href="#">Sprawdź czasy i korszty wysyłki</a>
+                </p>
+              </div>
+            </div>
+            <div class="popup-amount-of-product-container">
+              <button class="popup-remove-product">-</button>
+              <span class="popup-amount-of-product"></span>
+              <button class="popup-add-product">+</button>
+            </div>
+            <button class="primary-btn popup-submit-btn">Dodaj do koszyka</button>
+          </div>
+        </form>
       </div>
       <div class="overlay"></div>
     </div>
